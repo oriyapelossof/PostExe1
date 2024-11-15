@@ -1,0 +1,16 @@
+{
+  "name": "postexe1",
+  "version": "1.0.0",
+  "description": "Exercise 1 Posts and Comments.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gal Cohen and Oriya Pelossof",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.1"
+  }
+}

@@ -8,9 +8,14 @@ const postSchema=new Schema({
     },
     content:String,
     
-    owner:{
+    sender:{
         type: String,
         required: true,
+    },
+
+    senderId:{
+        type: String,
+        required: true, 
     },
 
     date:{

@@ -10,5 +10,6 @@ Content-Type: application/json
 {
     "title": "Post1",
     "content": "First Post",
-    "owner": "Gal"
+    "sender": "Amit",
+    "senderId": "123456"
 }

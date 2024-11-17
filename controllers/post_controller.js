@@ -13,7 +13,19 @@ const createPost = async (req, res) => {
     }
   };
 
+  const getAllPosts = async (req, res) => {
+    const  senderFilter = req.query.sender;
+    try{
+      const posts = await postModel.find();
+      res.status(200).send(posts);
+    }catch(error){
+      res.status(400).send(error.message);
+    }
+
+  };
+
 
   module.exports = {
     createPost,
+    getAllPosts,
   };

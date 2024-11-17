@@ -4,7 +4,6 @@ const { json } = require("body-parser");
 
 
 const createPost = async (req, res) => {
-    console.log("I'm here!!!");
     const post=req.body; //returns an object
     try{
       const newPost= await postModel.create(post);

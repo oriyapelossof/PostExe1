@@ -13,11 +13,9 @@ const bodyParser=require("body-parser");
 app.use(bodyParser.json());//turns into object
 app.use(bodyParser.urlencoded({extended:true}));//takes url and takes the parameter
 
-
-app.get("/",(req,res)=>{
-    res.send("Welcome to our project");
-});
-
+//connect the routes of posts to the app.js
+const postRoutes = require("./routes/post_route");
+app.use("/posts", postRoutes);
 
 app.listen(port, ()=>{
     console.log("server is running: htpp://locaclhost:"+port);

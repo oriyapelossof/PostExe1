@@ -10,7 +10,7 @@ const postSchema=new Schema({
     
     owner:{
         type: String,
-        require: true,
+        required: true,
     },
 
     // date:{

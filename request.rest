@@ -13,3 +13,6 @@ Content-Type: application/json
     "sender": "Amit",
     "senderId": "123456"
 }
+
+###
+GET http://localhost:3000/posts?senderId=123456

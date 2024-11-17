@@ -8,5 +8,8 @@ router.post("/", (req, res) => {
   }); 
 
 
+router.get("/", postsController.getPostBySenderId);
+
+
 
   module.exports = router;

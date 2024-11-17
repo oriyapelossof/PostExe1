@@ -13,11 +13,11 @@ const postSchema=new Schema({
         require: true,
     },
 
-    date:{
-        type: Date,
-        default: Date.now,
-        require: true,
-    }
+    // date:{
+    //     type: Date,
+    //     default: Date.now,
+    //     require: true,
+    // }
 });
 
 const postModel=mongoose.model("Posts",postSchema);

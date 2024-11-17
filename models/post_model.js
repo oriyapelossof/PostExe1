@@ -8,15 +8,19 @@ const postSchema=new Schema({
     },
     content:String,
     
-    owner:{
+    sender:{
         type: String,
-        require: true,
+        required: true,
+    },
+
+    senderId:{
+        type: String,
+        required: true, 
     },
 
     date:{
         type: Date,
         default: Date.now,
-        require: true,
     }
 });
 

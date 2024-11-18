@@ -21,6 +21,10 @@ app.get("/",(req,res)=>{
 const postRoutes = require("./routes/post_route");
 app.use("/posts", postRoutes);
 
+//connect the routes of comments to the app.js
+const commentRoutes = require("./routes/comment_route");
+app.use("/comments", commentRoutes);
+
 app.listen(port, ()=>{
     console.log("server is running: htpp://locaclhost:"+port);
 })

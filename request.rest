@@ -13,3 +13,14 @@ Content-Type: application/json
     "sender": "Amit",
     "senderId": "123456"
 }
+
+###
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+    "title": "First comment",
+    "content": "Hi, my name is betty",
+    "owner": "Liad",
+    "postId": "673a45cbdbfd75870330befd"
+}

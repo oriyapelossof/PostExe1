@@ -13,9 +13,3 @@ Content-Type: application/json
     "sender": "Amit",
     "senderId": "123456"
 }
-
-##
-
-GET http://localhost:3000/posts/673a41f3942bde2829549778
-
-##

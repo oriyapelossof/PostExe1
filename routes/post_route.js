@@ -7,8 +7,4 @@ router.post("/", (req, res) => {
     postsController.createPost(req, res);
   }); 
 
-router.get("/:id", (req, res) => {
-  postsController.getPostById(req, res);
-});
-
   module.exports = router;

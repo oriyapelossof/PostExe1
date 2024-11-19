@@ -12,6 +12,17 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+    "title": "First comment",
+    "content": "Hi, my name is betty",
+    "owner": "Liad",
+    "postId": "673a45cbdbfd75870330befd"
+}
+
+###
 GET http://localhost:3000/posts
 
 ###

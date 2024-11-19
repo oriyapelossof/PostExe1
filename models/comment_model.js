@@ -10,11 +10,11 @@ const commentSchema=new Schema({
     
     owner:{
         type: String,
-        require: true,
+        required: true,
     },
 
     postId:{
-        type: mongoose.Sechema.Types.ObjectId, ref:"Posts",
+        type: mongoose.Schema.Types.ObjectId, ref:"Posts",
     },
 
     date:{

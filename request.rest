@@ -1,6 +1,3 @@
-### //check the first http request
-
-GET http://localhost:3000/
 
 ###
 
@@ -16,3 +13,20 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/posts/673a4021dfb5e29e03fa34df
+
+###
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+    "title": "First comment",
+    "content": "Hi, my name is betty",
+    "owner": "Liad",
+    "postId": "673a45cbdbfd75870330befd"
+}
+
+###
+GET http://localhost:3000/posts
+
+###
+GET http://localhost:3000/posts?senderId=123456

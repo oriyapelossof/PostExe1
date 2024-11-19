@@ -30,3 +30,6 @@ GET http://localhost:3000/posts
 
 ###
 GET http://localhost:3000/posts?senderId=123456
+
+###
+DELETE http://localhost:3000/comments/673d0c603c7b469345fc47c6

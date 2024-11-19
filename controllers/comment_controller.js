@@ -12,6 +12,17 @@ const createComment = async (req, res) => {
     }
 }
 
+const deleteComment = async (req, res) => {
+    const commentId=req.params.id;
+    try{
+      const deleteComment=await commentModel.findByIdAndDelete(commentId);
+      res.status(201).send(commentId);
+    }catch(error){
+      res.status(400).send(error.message);
+    }
+};
+
 module.exports = {
     createComment,
+    deleteComment,
 }

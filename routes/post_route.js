@@ -7,4 +7,7 @@ router.post("/", (req, res) => {
     postsController.createPost(req, res);
   }); 
 
-  module.exports = router;
+
+router.get("/", postsController.getPostBySenderId);
+
+module.exports = router;

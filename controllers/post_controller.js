@@ -13,7 +13,23 @@ const createPost = async (req, res) => {
     }
   };
 
+  const getPostBySenderId = async (req,res) => {
+    const sender = req.query.senderId;
+    try{
+      const postsById = await postModel.find({senderId:sender});
+      if(postsById.length==0)
+      {
+        res.status(400).send("No posts found for the given sender ID");
+      }else{
+        res.status(200).send(postsById);
+      }
+    }
+    catch(error){
+      res.status(400).send(error.message);
+    }
+  }
+
   module.exports = {
     createPost,
-
+    getPostBySenderId,
   };

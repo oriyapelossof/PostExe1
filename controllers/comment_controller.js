@@ -12,6 +12,17 @@ const createComment = async (req, res) => {
     }
 }
 
+const getAllComments = async (req, res) => {
+    try{
+      const comments = await commentModel.find();
+      res.status(200).send(comments);
+    }catch(error){
+      res.status(400).send(error.message);
+    }
+
+};
+
 module.exports = {
     createComment,
+    getAllComments,
 }

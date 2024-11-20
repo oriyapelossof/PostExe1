@@ -12,6 +12,9 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:3000/posts/673a4021dfb5e29e03fa34df
+
+###
 POST http://localhost:3000/comments
 Content-Type: application/json
 

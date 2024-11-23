@@ -13,7 +13,7 @@ router.get("/:id", (req, res) => {
 
 router.get("/",postsController.getAllPosts);
 
-router.get("/", postsController.getPostBySenderId);
+router.get("/bySender", postsController.getPostBySenderId);
 
 router.put("/:id",postsController.updatePost);
 

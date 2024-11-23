@@ -33,3 +33,12 @@ GET http://localhost:3000/posts?senderId=123456
 
 ###
 GET http://localhost:3000/comments
+
+###
+PUT http://localhost:3000/comments/673b1ac36edf7b5c65c9fbdd
+Content-Type: application/json
+
+{
+    "title": "change",
+    "content": "change"
+}

@@ -20,6 +20,7 @@ const deleteComment = async (req, res) => {
     }catch(error){
       res.status(400).send(error.message);
     }
+};
 
 const getAllComments = async (req, res) => {
     try{

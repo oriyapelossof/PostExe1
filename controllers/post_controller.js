@@ -1,8 +1,6 @@
 const postModel=require("../models/post_model");
 const { json } = require("body-parser");
 
-
-
 const createPost = async (req, res) => {
     const post=req.body; //returns an object
     try{
@@ -34,9 +32,9 @@ const getAllPosts = async (req, res) => {
 };
 
 const getPostBySenderId = async (req,res) => {
-    const sender = req.query.senderId;
+    const {senderId} = req.query;
     try{
-      const postsById = await postModel.find({senderId:sender});
+      const postsById = await postModel.find({senderId: senderId});
       if(postsById.length==0)
       {
         res.status(400).send("No posts found for the given sender ID");
@@ -47,11 +45,27 @@ const getPostBySenderId = async (req,res) => {
     catch(error){
       res.status(400).send(error.message);
     }
-}
+};
+
+const updatePost = async (req,res) =>{
+  const postId = req.params.id;
+  try{
+      const newPost = await postModel.findByIdAndUpdate(
+          postId,
+          req.body,
+          {new:true}  
+      );
+
+      res.status(200).send(newPost);
+  }catch(error){
+      res.status(400).send(error.message);
+  }
+};
 
   module.exports = {
     createPost,
     getAllPosts,
     getPostBySenderId,
     getPostById,
+    updatePost,
 };

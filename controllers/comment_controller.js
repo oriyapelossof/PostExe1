@@ -10,7 +10,7 @@ const createComment = async (req, res) => {
     }catch(error){
         res.status(400).send(error.message);
     }
-}
+};
 
 const deleteComment = async (req, res) => {
     const commentId=req.params.id;
@@ -30,8 +30,24 @@ const getAllComments = async (req, res) => {
     }
 };
 
+const updateComment = async (req,res) =>{
+    const commentId = req.params.id;
+    try{
+        const newComment = await commentModel.findByIdAndUpdate(
+            commentId,
+            req.body,
+            {new:true}  
+        );
+
+        res.status(200).send(newComment);
+    }catch(error){
+        res.status(400).send(error.message);
+    }
+};
+
 module.exports = {
     createComment,
     deleteComment,
     getAllComments,
+    updateComment,
 }

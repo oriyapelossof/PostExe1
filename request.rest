@@ -29,10 +29,31 @@ Content-Type: application/json
 GET http://localhost:3000/posts
 
 ###
+GET http://localhost:3000/posts/bySender?senderId=123456
+
+###
 GET http://localhost:3000/posts?senderId=123456
 
 ###
 DELETE http://localhost:3000/comments/673d0c603c7b469345fc47c6
 
 ###
+PUT http://localhost:3000/posts/673d0323f4a554d44632de77
+Content-Type: application/json
+
+{
+    "title": "This is updated - title2",
+    "content": "This is updated - content2"
+}
+
+###
 GET http://localhost:3000/comments
+
+###
+PUT http://localhost:3000/comments/673b1ac36edf7b5c65c9fbdd
+Content-Type: application/json
+
+{
+    "title": "change",
+    "content": "change"
+}

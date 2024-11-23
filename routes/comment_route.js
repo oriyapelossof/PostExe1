@@ -9,5 +9,7 @@ router.delete("/:id", (req, res) => {
 
 router.get("/",commentsController.getAllComments);
 
+router.put("/:id",commentsController.updateComment);
+
 
 module.exports = router;

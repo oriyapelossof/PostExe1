@@ -7,4 +7,7 @@ router.delete("/:id", (req, res) => {
     commentsController.deleteComment(req, res);
 });
 
+router.get("/",commentsController.getAllComments);
+
+
 module.exports = router;

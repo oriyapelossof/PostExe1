@@ -35,6 +35,9 @@ GET http://localhost:3000/posts/bySender?senderId=123456
 GET http://localhost:3000/posts?senderId=123456
 
 ###
+DELETE http://localhost:3000/comments/673d0c603c7b469345fc47c6
+
+###
 PUT http://localhost:3000/posts/673d0323f4a554d44632de77
 Content-Type: application/json
 

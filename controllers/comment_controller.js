@@ -12,6 +12,16 @@ const createComment = async (req, res) => {
     }
 };
 
+const deleteComment = async (req, res) => {
+    const commentId=req.params.id;
+    try{
+      const deleteComment=await commentModel.findByIdAndDelete(commentId);
+      res.status(200).send(commentId);
+    }catch(error){
+      res.status(400).send(error.message);
+    }
+};
+
 const getAllComments = async (req, res) => {
     try{
       const comments = await commentModel.find();
@@ -19,7 +29,6 @@ const getAllComments = async (req, res) => {
     }catch(error){
       res.status(400).send(error.message);
     }
-
 };
 
 const updateComment = async (req,res) =>{
@@ -39,6 +48,7 @@ const updateComment = async (req,res) =>{
 
 module.exports = {
     createComment,
+    deleteComment,
     getAllComments,
     updateComment,
 }

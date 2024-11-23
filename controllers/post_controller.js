@@ -34,9 +34,9 @@ const getAllPosts = async (req, res) => {
 };
 
 const getPostBySenderId = async (req,res) => {
-    const sender = req.query.senderId;
+    const {senderId} = req.query;
     try{
-      const postsById = await postModel.find({senderId:sender});
+      const postsById = await postModel.find({senderId: senderId});
       if(postsById.length==0)
       {
         res.status(400).send("No posts found for the given sender ID");

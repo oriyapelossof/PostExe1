@@ -10,7 +10,7 @@ const createComment = async (req, res) => {
     }catch(error){
         res.status(400).send(error.message);
     }
-}
+};
 
 const getAllComments = async (req, res) => {
     try{
@@ -35,7 +35,7 @@ const updateComment = async (req,res) =>{
     }catch(error){
         res.status(400).send(error.message);
     }
-}
+};
 
 module.exports = {
     createComment,

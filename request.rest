@@ -12,6 +12,9 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:3000/posts/673a4021dfb5e29e03fa34df
+
+###
 POST http://localhost:3000/comments
 Content-Type: application/json
 
@@ -27,3 +30,18 @@ GET http://localhost:3000/posts
 
 ###
 GET http://localhost:3000/posts/bySender?senderId=123456
+
+###
+GET http://localhost:3000/posts?senderId=123456
+
+###
+GET http://localhost:3000/comments
+
+###
+PUT http://localhost:3000/comments/673b1ac36edf7b5c65c9fbdd
+Content-Type: application/json
+
+{
+    "title": "change",
+    "content": "change"
+}

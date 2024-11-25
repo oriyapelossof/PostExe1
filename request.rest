@@ -19,7 +19,7 @@ POST http://localhost:3000/comments
 Content-Type: application/json
 
 {
-    "content": "Hi, my name is betty",
+    "content": "Hi, my name is liad",
     "owner": "Liad",
     "postId": "673a45cbdbfd75870330befd"
 }
@@ -31,7 +31,7 @@ GET http://localhost:3000/posts
 GET http://localhost:3000/posts/bySender?senderId=123456
 
 ###
-DELETE http://localhost:3000/comments/673d0c603c7b469345fc47c6
+DELETE http://localhost:3000/comments/6744419b3e275397fd738331
 
 ###
 PUT http://localhost:3000/posts/673d0323f4a554d44632de77
@@ -46,7 +46,7 @@ Content-Type: application/json
 GET http://localhost:3000/comments
 
 ###
-PUT http://localhost:3000/comments/673b1ac36edf7b5c65c9fbdd
+PUT http://localhost:3000/comments/6744419b3e275397fd738331
 Content-Type: application/json
 
 {
